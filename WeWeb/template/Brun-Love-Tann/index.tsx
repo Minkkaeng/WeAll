@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import { Menu, X } from 'lucide-react';
 import './GlobalStyles.css';
 
-export default function PickTemplate() {
+export default function BrunLoveTannTemplate() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -24,6 +24,7 @@ export default function PickTemplate() {
   useEffect(() => {
     document.documentElement.style.setProperty('--pick-bg', config.colors.background);
     document.documentElement.style.setProperty('--pick-primary', config.colors.primary);
+    document.title = "BRUN LØVE TANN | The Rebirth";
   }, []);
 
   return (
@@ -62,7 +63,7 @@ export default function PickTemplate() {
               ))}
             </nav>
             <div className="absolute bottom-10 text-[10px] font-black tracking-[0.5em] opacity-30 uppercase">
-              Brunløvetann — Chapter 2
+              Brun Løve Tann — Chapter 2
             </div>
           </motion.div>
         )}
@@ -86,7 +87,7 @@ export default function PickTemplate() {
           <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between gap-48 lg:gap-64">
             <div className="lg:w-1/2">
               <h2 className="pick-text-header text-[15vw] lg:text-[10vw] leading-[0.7] mb-12 text-white" style={{ fontFamily: config.fonts.heading }}>
-                BRUN<br/>LØVETANN<br/>PICK.
+                BRUN<br/>LØVE<br/>TANN.
               </h2>
               <div className="w-24 h-[2px] bg-[#be3127] mt-8"></div>
             </div>
@@ -109,7 +110,7 @@ export default function PickTemplate() {
             </div>
           </div>
           <div className="mt-64 pt-16 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-            <p className="text-[10px] opacity-40 font-black uppercase tracking-[0.5em] font-mono text-white">© 2026 BRUNLØVETANN — CREATED BY WEWEB SYSTEM.</p>
+            <p className="text-[10px] opacity-40 font-black uppercase tracking-[0.5em] font-mono text-white">© 2026 BRUN LØVE TANN — CREATED BY WEWEB SYSTEM.</p>
             <div className="flex gap-12 opacity-60 text-[9px] font-black uppercase tracking-widest text-white">
                <span>Terms</span>
                <span>Privacy</span>

@@ -5,7 +5,7 @@ import Studio from './pages/Studio';
 import Journal from './pages/Journal';
 import Contact from './pages/Contact';
 
-export default function MinimalistStudioTemplate() {
+export default function KinnCollectiveTemplate() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {

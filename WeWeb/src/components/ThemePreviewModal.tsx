@@ -106,8 +106,8 @@ export const ThemePreviewModal = ({ isOpen, onClose, themeTitle, themeCategory }
               style={{ height: '100%' }}
             >
               {/* Scrollable Content Area */}
-               <div className="flex-1 bg-gray-50 flex flex-col items-center overflow-y-auto no-scrollbar relative">
-                  {['MINIMAL', 'FRESH GROVE', 'WISE', 'PICK', 'NAAM', 'K-NEXUS', '국민25시'].includes(themeTitle.toUpperCase()) ? (
+                <div className="flex-1 bg-gray-50 flex flex-col items-center overflow-y-auto no-scrollbar relative">
+                  {['Kinn Collective', 'FRESH GROVE', 'WISE', 'BRUN LØVE TANN', 'NAAM', 'K-NEXUS', '국민25시', 'GRAND TASTE'].includes(themeTitle) ? (
                     <>
                       {!iframeLoaded && (
                         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 z-10">
@@ -117,13 +117,16 @@ export const ThemePreviewModal = ({ isOpen, onClose, themeTitle, themeCategory }
                       )}
                       <iframe 
                         src={
-                          themeTitle.toUpperCase() === 'MINIMAL' ? "/template/minimalist-studio" : 
-                          themeTitle.toUpperCase() === 'FRESH GROVE' ? "/template/fresh-grove" : 
-                          themeTitle.toUpperCase() === 'WISE' ? "/template/wise" : 
-                          themeTitle.toUpperCase() === 'PICK' ? "/template/pick" :
-                          themeTitle.toUpperCase() === 'NAAM' ? "/template/naam" :
-                          themeTitle.toUpperCase() === '國集25時' || themeTitle === '국민25시' ? "/template/kookmin25" :
-                          "/template/knexus"
+                          import.meta.env.BASE_URL + (
+                            themeTitle === 'Kinn Collective' ? "template/kinn-collective" : 
+                            themeTitle.toUpperCase() === 'FRESH GROVE' ? "template/fresh-grove" : 
+                            themeTitle.toUpperCase() === 'WISE' ? "template/wise" : 
+                            themeTitle.toUpperCase() === 'BRUN LØVE TANN' ? "template/pick" :
+                            themeTitle.toUpperCase() === 'NAAM' ? "template/naam" :
+                            themeTitle.toUpperCase() === '국민25시' ? "template/kookmin25" :
+                            themeTitle.toUpperCase() === 'GRAND TASTE' ? "template/grand-taste" :
+                            "template/knexus"
+                          )
                         } 
                        className={`w-full h-full border-0 transition-opacity duration-1000 ${iframeLoaded ? 'opacity-100' : 'opacity-0'}`}
                        onLoad={() => setIframeLoaded(true)}

@@ -3,6 +3,14 @@ import { motion, type Variants } from 'framer-motion';
 const projects = [
   { 
     id: 1, 
+    title: 'GRAND TASTE', 
+    category: '쇼핑몰/밀키트', 
+    width: 'col-span-12 md:col-span-12',
+    mainImage: 'assets/images/nongshim_hero_bg.png',
+    mobileImage: 'assets/images/nongshim_product_milk.png' // Use milk as mobile preview for variety
+  },
+  { 
+    id: 2, 
     title: 'K-Nexus', 
     category: '공공기관', 
     width: 'col-span-12 md:col-span-4',
@@ -10,15 +18,15 @@ const projects = [
     mobileImage: 'assets/images/knexus_mobile_actual.png'
   },
   { 
-    id: 2, 
-    title: 'Minimalist Studio', 
+    id: 3, 
+    title: 'Kinn Collective', 
     category: '에이전시', 
     width: 'col-span-12 md:col-span-8',
     mainImage: 'assets/images/minimalist_studio_actual.png',
     mobileImage: 'assets/images/minimalist_studio_mobile_actual.png'
   },
   { 
-    id: 3, 
+    id: 4, 
     title: 'Kookmin25', 
     category: '브랜드 사이트', 
     width: 'col-span-12 md:col-span-6',
@@ -26,7 +34,7 @@ const projects = [
     mobileImage: 'assets/images/kookmin25_mobile_actual.png'
   },
   { 
-    id: 4, 
+    id: 5, 
     title: 'NAAM', 
     category: '코스메틱', 
     width: 'col-span-12 md:col-span-6',
@@ -34,7 +42,7 @@ const projects = [
     mobileImage: 'assets/images/naam_mobile.png'
   },
   { 
-    id: 5, 
+    id: 6, 
     title: 'Fresh Grove', 
     category: '친환경 쇼핑몰', 
     width: 'col-span-12 md:col-span-8',
@@ -42,15 +50,15 @@ const projects = [
     mobileImage: 'assets/images/fresh_grove_mobile.png'
   },
   { 
-    id: 6, 
-    title: 'PICK', 
+    id: 7, 
+    title: 'BRUN LØVE TANN', 
     category: '라이프스타일', 
     width: 'col-span-12 md:col-span-4',
     mainImage: 'assets/images/pick_desktop.png',
     mobileImage: 'assets/images/pick_mobile.png'
   },
   { 
-    id: 7, 
+    id: 8, 
     title: 'WISE', 
     category: '기업 웹사이트', 
     width: 'col-span-12 md:col-span-12',

@@ -16,7 +16,7 @@ export default function Home() {
           style={{ y: y1 }}
           className="pick-text-header text-[40vw] lg:text-[28vw] leading-[0.7] pick-outline-text opacity-[0.2] whitespace-nowrap"
         >
-          BRUNLØVETANN
+          BRUN LØVE TANN
         </motion.h1>
       </div>
 
@@ -48,7 +48,7 @@ export default function Home() {
              </p>
              <button className="flex items-center gap-4 group">
                 <span className="text-[9px] font-black tracking-[0.5em] uppercase border-b border-black pb-1 group-hover:text-[#be3127] group-hover:border-[#be3127] transition-all">
-                  Chapter 2 Entrance
+                   Chapter 2 Entrance
                 </span>
              </button>
           </motion.div>
@@ -68,7 +68,7 @@ export default function Home() {
              THE<br/>REBIRTH.
            </h2>
            <div className="max-w-md text-[11px] md:text-sm font-black opacity-80 uppercase tracking-[0.2em] leading-relaxed text-left lg:text-right text-black">
-             우리는 단순히 과거를 복제하지 않습니다. 브룬러브땅의 챕터 2는 브랜드의 재탄생입니다. 새로운 감도와 맛을 지금 경험해 보십시오.
+             우리는 단순히 과거를 복제하지 않습니다. 브룬 뢰베 탄의 챕터 2는 브랜드의 재탄생입니다. 새로운 감도와 맛을 지금 경험해 보십시오.
            </div>
         </motion.div>
       </div>
