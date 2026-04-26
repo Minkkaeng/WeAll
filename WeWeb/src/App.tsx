@@ -16,6 +16,7 @@ import GrandTasteTemplate from '../template/Grand-Taste/index'
 import GrandTasteProductDetail from '../template/Grand-Taste/pages/ProductDetail'
 import GrandTasteLogin from '../template/Grand-Taste/pages/Login'
 import { CartProvider as GrandTasteCartProvider } from '../template/Grand-Taste/context/CartContext'
+import AllPetTemplate from '../template/ALLPET/index'
 
 function NotFound() {
   return (
@@ -64,6 +65,7 @@ function App() {
           <Route path="/template/naam" element={<NaamTemplate />} />
           <Route path="/template/knexus" element={<KNexusTemplate />} />
           <Route path="/template/kookmin25" element={<Kookmin25Template />} />
+          <Route path="/template/allpet/*" element={<AllPetTemplate />} />
           <Route path="/template/grand-taste/*" element={
             <GrandTasteCartProvider>
               <Routes>

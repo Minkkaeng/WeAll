@@ -17,10 +17,11 @@ import kookmin25ActualImg from '../assets/images/kookmin25_actual.png';
 import kookmin25MobileActualImg from '../assets/images/kookmin25_mobile_actual.png';
 import nongshimActualImg from '../assets/images/nongshim_actual.png';
 import nongshimMobileActualImg from '../assets/images/nongshim_mobile_actual.png';
+import allpetActualImg from '../assets/images/allpet_desktop.png';
+import allpetMobileActualImg from '../assets/images/allpet_mobile.png';
 
 
-
-const categories = ['ALL', '쇼핑몰', '기업 브랜드', '밀키트', '관공서', '포털사이트', '기타'];
+const categories = ['ALL', '쇼핑몰', '기업 브랜드', '관공서', '포털사이트', '기타'];
 
 const themeLibraryData = [
   // 이미지가 있는 주요 템플릿 (첫 번째 줄 및 추가)
@@ -30,12 +31,13 @@ const themeLibraryData = [
   { id: 4, title: 'BRUN LØVE TANN', category: '쇼핑몰', imgColor: 'bg-stone-100', desktopThumbnail: pickActualImg, mobileThumbnail: pickMobileActualImg },
   { id: 5, title: 'Kinn Collective', category: '기업 브랜드', imgColor: 'bg-[#111111]', desktopThumbnail: minimalActualImg, mobileThumbnail: minimalMobileActualImg },
   { id: 6, title: 'NAAM', category: '쇼핑몰', imgColor: 'bg-[#FDF6E3]', desktopThumbnail: naamActualImg, mobileThumbnail: naamMobileActualImg },
-  { id: 7, title: 'K-Nexus', category: '포털사이트', imgColor: 'bg-white', desktopThumbnail: knexusActualImg, mobileThumbnail: knexusMobileActualImg },
+  { id: 7, title: 'K-Nexus', category: '관공서', imgColor: 'bg-white', desktopThumbnail: knexusActualImg, mobileThumbnail: knexusMobileActualImg },
   { id: 8, title: '국민25시', category: '관공서', imgColor: 'bg-[#002758]', desktopThumbnail: kookmin25ActualImg, mobileThumbnail: kookmin25MobileActualImg },
+  { id: 9, title: 'ALLPET', category: '포털사이트', imgColor: 'bg-[#FF4D4D]', desktopThumbnail: allpetActualImg, mobileThumbnail: allpetMobileActualImg },
   
-  // 9번부터 40번까지 모두 빈 템플릿 (Coming Soon)으로 통일
-  ...Array.from({ length: 32 }, (_, i) => ({
-    id: i + 9,
+  // 10번부터 40번까지 모두 빈 템플릿 (Coming Soon)으로 통일
+  ...Array.from({ length: 31 }, (_, i) => ({
+    id: i + 10,
     title: `Coming Soon ${i + 1}`,
     category: '기타',
     imgColor: 'bg-gray-50',
@@ -83,7 +85,7 @@ export const ThemeLibrary = () => {
           ))}
         </div>
 
-        {/* 4-Column Uniform Grid */}
+        {/* 3-Column Landscape Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
@@ -91,7 +93,7 @@ export const ThemeLibrary = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredThemes.map((theme, index) => (
               <motion.div
@@ -111,7 +113,7 @@ export const ThemeLibrary = () => {
                 className="group cursor-pointer flex flex-col outline-none focus-visible:ring-2 focus-visible:ring-blood-coral rounded-2xl"
               >
                 {/* Card Image Area */}
-                <div className="relative w-full aspect-[3/4] bg-gray-100 border border-gray-100 rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
+                <div className="relative w-full aspect-video bg-gray-100 border border-gray-100 rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
                   {/* Template Full Cover */}
                   {theme.desktopThumbnail ? (
                     <img src={theme.desktopThumbnail} alt={`${theme.title} Preview`} className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />

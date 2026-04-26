@@ -4,7 +4,7 @@ const projects = [
   { 
     id: 1, 
     title: 'GRAND TASTE', 
-    category: '쇼핑몰/밀키트', 
+    category: '쇼핑몰', 
     width: 'col-span-12 md:col-span-12',
     mainImage: 'assets/images/nongshim_hero_bg.png',
     mobileImage: 'assets/images/nongshim_product_milk.png' // Use milk as mobile preview for variety
@@ -12,7 +12,7 @@ const projects = [
   { 
     id: 2, 
     title: 'K-Nexus', 
-    category: '공공기관', 
+    category: '관공서', 
     width: 'col-span-12 md:col-span-4',
     mainImage: 'assets/images/knexus_desktop.png',
     mobileImage: 'assets/images/knexus_mobile_actual.png'
@@ -65,6 +65,14 @@ const projects = [
     mainImage: 'assets/images/wise_desktop.png',
     mobileImage: 'assets/images/wise_mobile.png'
   },
+  { 
+    id: 9, 
+    title: 'ALLPET', 
+    category: '포털사이트', 
+    width: 'col-span-12 md:col-span-12',
+    mainImage: 'assets/images/allpet_desktop.png',
+    mobileImage: 'assets/images/allpet_mobile.png' 
+  },
 ];
 
 const cardVariants: Variants = {
@@ -96,7 +104,11 @@ export const WorkList = () => {
           >
             {/* Main Template Image */}
             <div className="absolute inset-0 bg-gray-200 flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-               <img src={getImageUrl(project.mainImage)} alt={project.title} className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity" />
+               {project.mainImage ? (
+                 <img src={getImageUrl(project.mainImage)} alt={project.title} className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity" />
+               ) : (
+                 <div className="w-full h-full bg-[#FF4D4D] flex items-center justify-center text-white font-bold text-2xl opacity-90 group-hover:opacity-100 transition-opacity">COMING SOON</div>
+               )}
                <div className="absolute inset-0 bg-gradient-to-t from-deep-black/70 via-deep-black/20 to-transparent transition-opacity group-hover:opacity-80"></div>
             </div>
 
@@ -114,7 +126,11 @@ export const WorkList = () => {
 
             {/* Mobile Template Reveal on Hover */}
             <div className="absolute -bottom-10 -right-10 w-48 h-80 bg-white rounded-[2rem] shadow-2xl border-4 border-gray-100 opacity-0 translate-y-12 rotate-12 group-hover:opacity-100 group-hover:translate-y-0 group-hover:-rotate-3 transition-all duration-700 ease-out z-20 overflow-hidden flex items-start justify-center">
-               <img src={getImageUrl(project.mobileImage)} alt={`${project.title} Mobile`} className="w-full h-auto object-cover object-top" />
+               {project.mobileImage ? (
+                 <img src={getImageUrl(project.mobileImage)} alt={`${project.title} Mobile`} className="w-full h-auto object-cover object-top" />
+               ) : (
+                 <div className="w-full h-full bg-gray-100 flex items-center justify-center text-gray-400 font-bold text-sm">MOBILE</div>
+               )}
             </div>
             
           </motion.div>
